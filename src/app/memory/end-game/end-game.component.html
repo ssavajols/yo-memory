@@ -1,0 +1,10 @@
+<div>
+  end-game works!
+  <button (click)="handleClick()">Rejouer</button>
+  Scores :
+  <ul>
+    <li *ngFor="let player of _options.players; let i = index">
+      Joueur {{i}} : {{ player.score }}
+    </li>
+  </ul>
+</div>
