@@ -1,0 +1,55 @@
+.pause-panel {
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.25s;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  &.active {
+    opacity: 1;
+    background: rgba(255, 255, 255, 0.8);
+    pointer-events: initial;
+  }
+}
+
+
+.button {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  z-index: 101;
+}
+
+.button span {
+  background: #666666;
+  width: 5px;
+  height: 20px;
+  display: inline-block;
+  margin: 3px;
+  transition: 0.25s;
+
+}
+
+.button.active span {
+  transform: rotate(45deg) translateX(5px) translateY(-3px);
+}
+
+.button.active span + span {
+  transform: rotate(-45deg) translateX(-5px) translateY(-3px);
+}
+
+yom-button {
+  margin: 9px;
+}
+
+.resume {
+  margin-top: 87px;
+}

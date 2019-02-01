@@ -1,0 +1,57 @@
+span {
+
+  font-family: Impact;
+  font-size: 48px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: #666666;
+  margin-right: 20px;
+}
+
+.option {
+  margin-bottom: 36px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+yom-card {
+  width: 66px;
+  height: 112px;
+  opacity: 0.3;
+
+  &.selected {
+    opacity: 1;
+  }
+}
+
+.theme-option {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  margin-top: 20px;
+}
+
+.theme {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+
+  justify-content: space-between;
+
+  width: 45%;
+}
+
+.theme-title {
+  font-family: Impact;
+  font-size: 28px;
+  width: 100%;
+  margin-bottom: 10px;
+  text-align: center;
+  color: #666666;
+}

@@ -1,0 +1,43 @@
+@import "../../../variables";
+
+.endgame-panel {
+  position: fixed;
+  z-index: 200;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transition: 0.25s;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.8);
+}
+
+ul {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  max-width: 800px;
+  width: 100%;
+  justify-content: center;
+
+  li {
+    width: 50%;
+  font-family: Impact;
+  font-size: 48px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: $COLOR_BLUE;
+  white-space: nowrap;
+  margin-bottom: 50px;
+
+    &.best {
+      color: $COLOR_GREEN;
+    }
+  }
+}

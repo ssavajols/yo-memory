@@ -1,0 +1,40 @@
+.container {
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.25s;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  &.active {
+    opacity: 0.2;
+    background: rgba(255, 255, 255, 0.8);
+  }
+}
+
+.player {
+  width: 120px;
+  height: 288px;
+  background-image: url("/assets/ui/player.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+  margin: 40px;
+
+  font-family: Impact;
+  font-size: 48px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 340px;
+  letter-spacing: normal;
+  text-align: center;
+  color: #ffffff;
+}

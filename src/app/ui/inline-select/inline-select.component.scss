@@ -1,0 +1,33 @@
+@import "../../../variables";
+
+.selected{
+  background: $COLOR_GREEN;
+}
+
+button {
+  background:$COLOR_BLUE;
+  font-family: Impact;
+  font-size: 48px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: #ffffff;
+  border-radius: 0;
+  border: 0;
+  padding: 30px 15px;
+  line-height: 0;
+  width: 75px;
+  outline: 0;
+}
+
+button:first-child {
+  border-radius: 30px 0 0 30px;
+  padding: 30px 15px 30px 25px;
+}
+
+button:last-child {
+  border-radius: 0 30px 30px 0;
+  padding: 30px 25px 30px 15px;
+}
