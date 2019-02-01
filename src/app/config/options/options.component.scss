@@ -1,6 +1,8 @@
+@import "../../../variables";
+
 span {
 
-  font-family: Impact;
+  font-family: $FONT_PRIMARY;
   font-size: 48px;
   font-weight: normal;
   font-style: normal;
@@ -48,7 +50,7 @@ yom-card {
 }
 
 .theme-title {
-  font-family: Impact;
+  font-family: $FONT_PRIMARY;
   font-size: 28px;
   width: 100%;
   margin-bottom: 10px;
