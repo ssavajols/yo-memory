@@ -5,7 +5,7 @@ import { Component, OnInit, Input } from '@angular/core'
   template: `
     <div class="container" [ngClass]="{ active: isActive }">
       <div class="player">J{{ lastPlayer }}</div>
-      <img src="/assets/ui/rotate.png" />
+      <img src="./assets/ui/rotate.png" />
       <div class="player">J{{ newPlayer }}</div>
     </div>
   `,
