@@ -15,7 +15,7 @@ import {
   template: `
     <div class="container" @child>
       <div class="overlay"></div>
-      <img src="/assets/ui/logo.png" />
+      <img src="./assets/ui/logo.png" />
       <yom-button (action)="_navigation.config()">Jouer</yom-button>
     </div>
   `,
