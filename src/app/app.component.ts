@@ -5,7 +5,10 @@ import { routeAnimation } from './app-animation'
 @Component({
   selector: 'yom-root',
   template: `
-    <div [@routeAnimations]="prepareRoute(outlet)">
+    <div
+      (touchmove)="touchmove($event)"
+      [@routeAnimations]="prepareRoute(outlet)"
+    >
       <router-outlet #outlet="outlet"></router-outlet>
     </div>
   `,
@@ -20,5 +23,9 @@ export class AppComponent {
       outlet.activatedRouteData &&
       outlet.activatedRouteData['animation']
     )
+  }
+
+  touchmove(event: any) {
+    event.preventDefault()
   }
 }

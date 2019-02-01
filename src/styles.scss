@@ -52,6 +52,9 @@ html, body {
   min-height: 100%;
   width: 100%;
   height: 100%;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
 }
 
 yom-root, yom-root > div {

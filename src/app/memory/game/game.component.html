@@ -22,7 +22,8 @@
         [cardBackSide]='_options.cardBackSide'
         [cardTheme]='_options.cardTheme'
         [visible]="isCardFounded(card)"
-        (click)="selectCard(card)">
+        (touchend)="selectCard(card)"
+        (mouseup)="selectCard(card)">
       </yom-card>
     </div>
   </div>

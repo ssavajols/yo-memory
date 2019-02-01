@@ -19,4 +19,13 @@ button {
 
   outline: 0ch;
   cursor: pointer;
+  transition: background-color 0.1s;
+
+  &:hover {
+    background-color: lighten($color: $COLOR_BLUE, $amount: 5)
+  }
+
+  &:active {
+    background-color: lighten($color: $COLOR_BLUE, $amount: 10)
+  }
 }
