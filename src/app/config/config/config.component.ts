@@ -29,7 +29,7 @@ import { trigger, transition, style, animate } from '@angular/animations'
   ]
 })
 export class ConfigComponent implements OnInit {
-  constructor(private _navigation: NavigationService) {}
+  constructor(public _navigation: NavigationService) {}
 
   ngOnInit() {}
 }

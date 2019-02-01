@@ -51,27 +51,13 @@ import { OptionsAnimation } from './options-animation'
     </div>
   `,
   styleUrls: ['./options.component.scss'],
-  animations: [OptionsAnimation()]
+  animations: [OptionsAnimation]
 })
-export class OptionsComponent implements OnInit, OnDestroy {
-  constructor(private _options: GameOptionsService) {}
+export class OptionsComponent implements OnInit {
+  constructor(public _options: GameOptionsService) {}
   show = false
 
-  private _keyupEvent: Subscription
-
-  ngOnInit() {
-    this._keyupEvent = fromEvent(window, 'keyup').subscribe(
-      (e: KeyboardEvent) => {
-        if (e.keyCode === 27) {
-          this.toggleOptions()
-        }
-      }
-    )
-  }
-
-  ngOnDestroy() {
-    this._keyupEvent.unsubscribe()
-  }
+  ngOnInit() {}
 
   toggleOptions() {
     this.show = !this.show

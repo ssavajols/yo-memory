@@ -28,7 +28,7 @@ export class PauseComponent implements OnInit {
 
   isActive = false
 
-  constructor(private _navigation: NavigationService) {}
+  constructor(public _navigation: NavigationService) {}
 
   ngOnInit() {}
 

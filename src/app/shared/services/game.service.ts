@@ -9,7 +9,7 @@ import { Player } from '../classes/player'
   providedIn: 'root'
 })
 export class GameService {
-  constructor(private _options: GameOptionsService) {}
+  constructor(public _options: GameOptionsService) {}
 
   cardFounded: Card[] = []
   cardsRemaining: number

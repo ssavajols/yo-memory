@@ -31,7 +31,7 @@ import { trigger, style, animate, transition } from '@angular/animations'
   ]
 })
 export class EndGameComponent implements OnInit {
-  constructor(private _options: GameOptionsService) {}
+  constructor(public _options: GameOptionsService) {}
 
   @Output() rejouer = new EventEmitter<any>()
 

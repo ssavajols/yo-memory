@@ -31,7 +31,7 @@ export class CardComponent implements OnInit {
   @Input() selected = false
   @Input() visible = false
 
-  constructor(private _options: GameOptionsService) {}
+  constructor(public _options: GameOptionsService) {}
 
   ngOnInit() {}
 

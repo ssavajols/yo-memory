@@ -1,12 +1,6 @@
-import {
-  trigger,
-  state,
-  style,
-  transition,
-  animate
-} from '@angular/animations';
+import { trigger, state, style, transition, animate } from '@angular/animations'
 
-export const OptionsAnimation = ({ duration = '0.25s' } = {}) =>
+export const OptionsAnimation = [
   trigger('options', [
     state(
       'show',
@@ -22,5 +16,6 @@ export const OptionsAnimation = ({ duration = '0.25s' } = {}) =>
         pointerEvents: 'none'
       })
     ),
-    transition('show <=> hide', [animate(duration)])
-  ]);
+    transition('show <=> hide', [animate('0.25s')])
+  ])
+]

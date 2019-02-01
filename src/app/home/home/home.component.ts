@@ -44,7 +44,7 @@ import {
   ]
 })
 export class HomeComponent implements OnInit {
-  constructor(private _navigation: NavigationService) {}
+  constructor(public _navigation: NavigationService) {}
 
   ngOnInit() {}
 }

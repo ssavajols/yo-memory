@@ -51,9 +51,9 @@ export class GameComponent implements OnInit {
   StyleCard
 
   constructor(
-    private _options: GameOptionsService,
-    private _game: GameService,
-    private _navigation: NavigationService
+    public _options: GameOptionsService,
+    public _game: GameService,
+    public _navigation: NavigationService
   ) {}
 
   ngOnInit() {
