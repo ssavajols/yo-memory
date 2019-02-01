@@ -4,6 +4,7 @@ import { FormsModule } from '@angular/forms'
 import { RouterTestingModule } from '@angular/router/testing'
 
 import { EndGameComponent } from './end-game.component'
+import { NoopAnimationsModule } from '@angular/platform-browser/animations'
 
 describe('EndGameComponent', () => {
   let component: EndGameComponent
@@ -12,7 +13,7 @@ describe('EndGameComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [EndGameComponent],
-      imports: [FormsModule, RouterTestingModule],
+      imports: [FormsModule, RouterTestingModule, NoopAnimationsModule],
       schemas: [CUSTOM_ELEMENTS_SCHEMA]
     }).compileComponents()
   }))

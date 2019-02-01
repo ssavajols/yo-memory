@@ -1,38 +1,38 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { async, ComponentFixture, TestBed } from '@angular/core/testing'
 
-import { CardComponent } from './card.component';
+import { CardComponent } from './card.component'
 
 describe('CardComponent', () => {
-  let component: CardComponent;
-  let fixture: ComponentFixture<CardComponent>;
+  let component: CardComponent
+  let fixture: ComponentFixture<CardComponent>
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [CardComponent]
-    }).compileComponents();
-  }));
+    }).compileComponents()
+  }))
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(CardComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
-  });
+    fixture = TestBed.createComponent(CardComponent)
+    component = fixture.componentInstance
+    fixture.detectChanges()
+  })
 
   it('should create', () => {
-    expect(component).toBeTruthy();
-  });
+    expect(component).toBeTruthy()
+  })
 
   it('should set visible state', () => {
-    component.visible = true;
-    expect(component.isVisible()).toBe(true);
+    component.visible = true
+    expect(component.isVisible()).toBe(true)
 
-    component.visible = false;
-    expect(component.isVisible()).toBe(false);
+    component.visible = false
+    expect(component.isVisible()).toBe(false)
 
-    component.selected = true;
-    expect(component.isVisible()).toBe(true);
+    component.selected = true
+    expect(component.isVisible()).toBe(true)
 
-    component.selected = false;
-    expect(component.isVisible()).toBe(false);
-  });
-});
+    component.selected = false
+    expect(component.isVisible()).toBe(false)
+  })
+})
