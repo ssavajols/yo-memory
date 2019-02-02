@@ -1,6 +1,6 @@
 {
   "short_name": "Yo memory",
-  "name": "Web App Manifest",
+  "name": "Yo memory",
   "background_color": "#FFFFFF",
   "display": "fullscreen",
   "Scope": "/",
