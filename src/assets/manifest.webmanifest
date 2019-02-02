@@ -7,17 +7,17 @@
   "orientation": "landscape",
   "icons": [
     {
-      "src": "/yo-memory/assets/pwa/icons/yo-memory-icon-152x152.png",
+      "src": "/assets/pwa/icons/yo-memory-icon-152x152.png",
       "type": "image/png",
       "sizes": "152x152"
     },
     {
-      "src": "/yo-memory/assets/pwa/icons/yo-memory-icon-167x167.png",
+      "src": "/assets/pwa/icons/yo-memory-icon-167x167.png",
       "type": "image/png",
       "sizes": "167x167"
     },
     {
-      "src": "/yo-memory/assets/pwa/icons/yo-memory-icon-180x180.png",
+      "src": "/assets/pwa/icons/yo-memory-icon-180x180.png",
       "type": "image/png",
       "sizes": "180x180"
     }

@@ -1,5 +1,5 @@
 build-prod:
-	npm run build -- --prod --base-href /yo-memory/
+	npm run build -- --prod --base-href /
 
 start:
 	npm start

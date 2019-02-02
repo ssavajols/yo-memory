@@ -1,6 +1,6 @@
 # YoMemory
 
-Play the game : https://ssavajols.github.io/yo-memory/
+Play the game : http://yo-memory.fr
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.2.3.
 
