@@ -1,28 +1,30 @@
 @import "../../../variables";
+@import "../../../mixins";
 
 span {
 
   font-family: $FONT_PRIMARY;
-  font-size: 48px;
+  font-size: toREM(48);
   font-weight: normal;
   font-style: normal;
   font-stretch: normal;
   letter-spacing: normal;
   text-align: center;
   color: #666666;
-  margin-right: 20px;
+  margin-right: toREM(20);
 }
 
 .option {
-  margin-bottom: 36px;
+  margin-bottom: toREM(36);
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
 
 yom-card {
-  width: 66px;
-  height: 112px;
+  width: toREM(66);
+  height: toREM(112);
+  transition: 0.25s;
   opacity: 0.3;
 
   &.selected {
@@ -35,7 +37,7 @@ yom-card {
   flex-direction: row;
   justify-content: space-between;
 
-  margin-top: 20px;
+  margin-top: toREM(20);
 }
 
 .theme {
@@ -51,9 +53,9 @@ yom-card {
 
 .theme-title {
   font-family: $FONT_PRIMARY;
-  font-size: 28px;
+  font-size: toREM(28);
   width: 100%;
-  margin-bottom: 10px;
+  margin-bottom: toREM(10);
   text-align: center;
   color: #666666;
 }

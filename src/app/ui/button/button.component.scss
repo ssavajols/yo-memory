@@ -1,18 +1,19 @@
 @import "../../../variables";
+@import "../../../mixins";
 
 button {
   text-transform: uppercase;
-  padding: 30px 40px;
-  border-radius: 34px;
+  padding: toREM(30) toREM(40);
+  border-radius: toREM(34);
   border: none;
   background-color: $COLOR_BLUE;
 
   font-family: $FONT_PRIMARY;
-  font-size: 34px;
+  font-size: toREM(34);
   font-weight: normal;
   font-style: normal;
   font-stretch: normal;
-  line-height: 0.28;
+  line-height: toREM(0.28);
   letter-spacing: normal;
   text-align: center;
   color: #ffffff;

@@ -15,8 +15,14 @@ import {
   template: `
     <div class="container" @child>
       <div class="overlay"></div>
-      <img src="./assets/ui/logo.png" />
+      <img class="logo" src="./assets/ui/logo.png" />
       <yom-button (action)="_navigation.config()">Jouer</yom-button>
+      <a
+        href="https://www.linkedin.com/in/sylvain-savajols-735a5215/"
+        target="_blank"
+        class="linkedin"
+        ><img src="assets/ui/linkedin.png" alt="linkedin"
+      /></a>
     </div>
   `,
   styleUrls: ['./home.component.scss'],
@@ -24,6 +30,7 @@ import {
     trigger('child', [
       transition(':enter', [
         query('img, yom-button', style({ opacity: 0.01 })),
+        query('.linkedin', style({ transform: 'translateY(100px)' })),
         group([
           query('.overlay', [
             style({ transform: 'scale(2)' }),
@@ -37,6 +44,11 @@ import {
             'yom-button',
             [animate('0.5s ease-out'), style({ opacity: 1 })],
             { delay: '0.75s' }
+          ),
+          query(
+            '.linkedin',
+            [animate('0.5s ease-out'), style({ transform: 'translateY(0px)' })],
+            { delay: '1.5s' }
           )
         ])
       ])

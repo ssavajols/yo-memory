@@ -47,7 +47,6 @@ export class GameComponent implements OnInit {
 
   disablingPlayerActions = false
 
-  StyleContainer
   StyleCard
 
   constructor(
@@ -72,17 +71,6 @@ export class GameComponent implements OnInit {
     })
   }
 
-  containerSize() {
-    const width = Math.min(800, window.innerWidth - 100)
-    const height = Math.min(550, window.innerWidth - 100)
-    return {
-      marginTop: -height / 2 + 'px',
-      marginLeft: -width / 2 + 'px',
-      width: width + 'px',
-      height: height + 'px'
-    }
-  }
-
   cardSize() {
     const nbLines = this.getNbLines(this._options.nbCards * 2)
     const cardsPerLine = Math.ceil((this._options.nbCards * 2) / nbLines)
@@ -99,7 +87,6 @@ export class GameComponent implements OnInit {
   }
 
   setCardSizes() {
-    this.StyleContainer = this.containerSize()
     this.StyleCard = this.cardSize()
   }
 

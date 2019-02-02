@@ -33,7 +33,8 @@ import { OptionsAnimation } from './options-animation'
               [cardTheme]="theme"
               [ngClass]="{ selected: _options.cardTheme === theme }"
               *ngFor="let theme of _options.cardThemes"
-              (click)="selectThemeRecto(theme, _options.cardThemes)"
+              (touchend)="selectThemeRecto(theme, _options.cardThemes)"
+              (mouseup)="selectThemeRecto(theme, _options.cardThemes)"
             ></yom-card>
           </div>
           <div class="theme">
@@ -43,7 +44,8 @@ import { OptionsAnimation } from './options-animation'
               [cardBackSide]="theme"
               [ngClass]="{ selected: _options.cardBackSide === theme }"
               *ngFor="let theme of _options.cardBackSides"
-              (click)="selectThemeVerso(theme)"
+              (touchend)="selectThemeVerso(theme)"
+              (mouseup)="selectThemeVerso(theme)"
             ></yom-card>
           </div>
         </div>

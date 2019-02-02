@@ -5,3 +5,11 @@ $COLOR_RED: #D32F2F;
 $COLOR_PINK: #ec008c;
 
 $FONT_PRIMARY: 'Open Sans Condensed', Impact, sans-serif;
+
+
+$MOBILE: 320px;
+$TABLET: 768px;
+$DESKTOP: 1024px;
+
+$MOBILE_MAX: $TABLET - 1px;
+$TABLET_MAX: $DESKTOP - 1px;

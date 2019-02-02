@@ -1,8 +1,9 @@
 @import "../../../variables";
+@import "../../../mixins";
 
 h1 {
   font-family: $FONT_PRIMARY;
-  font-size: 48px;
+  font-size: toREM(48);
   font-weight: normal;
   font-style: normal;
   font-stretch: normal;
@@ -11,5 +12,11 @@ h1 {
   text-align: center;
   color: $COLOR_BLUE;
 
-  margin-bottom: 86px;
+  margin-bottom: toREM(86);
+}
+
+@media screen and (max-width: $MOBILE_MAX) {
+  h1 {
+    margin-bottom: toREM(43);
+  }
 }

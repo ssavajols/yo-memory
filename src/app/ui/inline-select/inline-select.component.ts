@@ -7,7 +7,8 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core'
       *ngFor="let choice of choices; let i = index"
       class="choice choice-{{ i }}"
       [ngClass]="{ selected: choice === selected }"
-      (click)="handleSelect(choice)"
+      (touchend)="handleSelect(choice)"
+      (mouseup)="handleSelect(choice)"
     >
       {{ choice }}
     </button>

@@ -1,4 +1,5 @@
 @import "../../../variables";
+@import "../../../mixins";
 
 .endgame-panel {
   position: fixed;
@@ -25,16 +26,16 @@ ul {
 
   li {
     width: 50%;
-  font-family: $FONT_PRIMARY;
-  font-size: 48px;
-  font-weight: normal;
-  font-style: normal;
-  font-stretch: normal;
-  letter-spacing: normal;
-  text-align: center;
-  color: $COLOR_BLUE;
-  white-space: nowrap;
-  margin-bottom: 50px;
+    font-family: $FONT_PRIMARY;
+    font-size: toREM(48);
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    letter-spacing: normal;
+    text-align: center;
+    color: $COLOR_BLUE;
+    white-space: nowrap;
+    margin-bottom: toREM(50);
 
     &.best {
       color: $COLOR_GREEN;

@@ -1,4 +1,5 @@
 @import "../../../variables";
+@import "../../../mixins";
 
 .container {
   width: 100%;
@@ -22,9 +23,19 @@
   pointer-events: none
 }
 
-img {
-  width: 300px;
+.logo {
+  width: toREM(300);
   display: block;
-  margin-bottom: 70px;
+  margin-bottom: toREM(70);
 }
 
+.linkedin {
+  position: absolute;
+  right:toREM(15);
+  bottom: toREM(15);
+  width: toREM(40);
+
+  img {
+    width: 100%;
+  }
+}

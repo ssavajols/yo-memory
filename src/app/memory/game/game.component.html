@@ -1,32 +1,29 @@
 <div @child>
-  <!-- <button (click)="startNewGame()">Start new game</button> -->
   <yom-pause (resetGame)="startNewGame()"></yom-pause>
-  <!-- <button (click)="_navigation.home()">Home</button> -->
-  <!-- <button (click)="_navigation.config()">Configuration</button> -->
 
   <!-- <h2>Player list : </h2> -->
   <div *ngFor="let player of (players$|async); let i = index" class="players" [ngClass]="'player-' + i">
     <yom-player
-      [player]="player"
-      [isActive]="(activePlayer$|async) === i"
-      [playerNumber]="i+1"></yom-player>
+    [player]="player"
+    [isActive]="(activePlayer$|async) === i"
+    [playerNumber]="i+1"></yom-player>
   </div>
 
   <!-- <h2>Card list : </h2> -->
-  <div class="cards" #cardContainer [ngStyle]="StyleContainer">
+  <div class="cards" #cardContainer>
     <div class="overlay" [ngClass]="{ active : disablingPlayerActions }"></div>
     <div class="card" *ngFor="let card of (cards$|async)" [ngStyle]="StyleCard" >
       <yom-card
-        [number]="card.number"
-        [selected]="card === card1 || card === card2"
-        [cardBackSide]='_options.cardBackSide'
-        [cardTheme]='_options.cardTheme'
-        [visible]="isCardFounded(card)"
-        (touchend)="selectCard(card)"
-        (mouseup)="selectCard(card)">
-      </yom-card>
-    </div>
+      [number]="card.number"
+      [selected]="card === card1 || card === card2"
+      [cardBackSide]='_options.cardBackSide'
+      [cardTheme]='_options.cardTheme'
+      [visible]="isCardFounded(card)"
+      (touchend)="selectCard(card)"
+      (mouseup)="selectCard(card)">
+    </yom-card>
   </div>
+</div>
 
   <yom-end-game *ngIf="isEndGame$|async" (rejouer)="rejouer($event)"></yom-end-game>
   <yom-change-player [lastPlayer]="lastPlayer+1" [newPlayer]="newPlayer+1" [isActive]="isChangingPlayer"></yom-change-player>
