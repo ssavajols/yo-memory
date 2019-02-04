@@ -21,6 +21,7 @@ import {
         href="https://www.linkedin.com/in/sylvain-savajols-735a5215/"
         target="_blank"
         class="linkedin"
+        (click)="track()"
         ><img src="assets/ui/linkedin.png" alt="linkedin"
       /></a>
     </div>
@@ -59,4 +60,11 @@ export class HomeComponent implements OnInit {
   constructor(public _navigation: NavigationService) {}
 
   ngOnInit() {}
+
+  track() {
+    ; (window as any).gtag('event', 'linkedin', {
+      event_category: 'link',
+      event_label: 'clicked'
+    })
+  }
 }

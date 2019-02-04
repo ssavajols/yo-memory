@@ -33,6 +33,13 @@ export class GameService {
     this.cards$.next(this._options.cards)
     this.resetFoundedCards()
     this.isEndGame$.next(false)
+    ; (window as any).gtag('event', 'startGame', {
+      event_category: 'game',
+      event_label: 'start',
+      value: `NbCards: ${this._options.nbPlayers} - NbPlayers: ${
+        this._options.nbCards
+      }`
+    })
   }
 
   playTurn(card1: Card, card2: Card) {
@@ -110,5 +117,12 @@ export class GameService {
 
   endGame() {
     this.isEndGame$.next(true)
+    ; (window as any).gtag('event', 'endGame', {
+      event_category: 'game',
+      event_label: 'end',
+      value: `NbCards: ${this._options.nbPlayers} - NbPlayers: ${
+        this._options.nbCards
+      }`
+    })
   }
 }
