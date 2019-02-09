@@ -21,6 +21,9 @@ export class GameService {
   cards$ = new BehaviorSubject<Card[]>([])
   players$ = new BehaviorSubject<Player[]>([])
 
+  startGameTime: Date = null
+  endGameTime: Date = null
+
   startGame(numberOfPlayers: number, numberOfCards: number) {
     this._options.setPlayers(numberOfPlayers)
     this._options.setCards(numberOfCards)
@@ -32,17 +35,22 @@ export class GameService {
     this.players$.next(this._options.players)
     this.cards$.next(this._options.cards)
     this.resetFoundedCards()
+    this.startGameTime = new Date()
     this.isEndGame$.next(false)
-    ; (window as any).gtag('event', 'startGame', {
-      event_category: 'game',
-      event_label: 'start',
-      value: `NbCards: ${this._options.nbPlayers} - NbPlayers: ${
-        this._options.nbCards
-      }`
-    })
+
+    if ((window as any).gtag) {
+      ; (window as any).gtag('event', 'startGame', {
+        event_category: 'game',
+        event_label: 'start',
+        value: `NbCards: ${this._options.nbPlayers} - NbPlayers: ${
+          this._options.nbCards
+        }`
+      })
+    }
   }
 
   playTurn(card1: Card, card2: Card) {
+    this.getActivePlayer().turnPlayed += 1
     if (this.matchCards(card1, card2)) {
       this.foundCard(card1)
       this.turnSuccess()
@@ -115,14 +123,24 @@ export class GameService {
       })
   }
 
+  getGameDuration(): Date {
+    const start = this.startGameTime
+    const end = this.endGameTime || new Date()
+
+    return new Date(end.getTime() - start.getTime())
+  }
+
   endGame() {
     this.isEndGame$.next(true)
-    ; (window as any).gtag('event', 'endGame', {
-      event_category: 'game',
-      event_label: 'end',
-      value: `NbCards: ${this._options.nbPlayers} - NbPlayers: ${
-        this._options.nbCards
-      }`
-    })
+    this.endGameTime = new Date()
+    if ((window as any).gtag) {
+      ; (window as any).gtag('event', 'endGame', {
+        event_category: 'game',
+        event_label: 'end',
+        value: `NbCards: ${this._options.nbPlayers} - NbPlayers: ${
+          this._options.nbCards
+        }`
+      })
+    }
   }
 }

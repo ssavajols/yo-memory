@@ -72,9 +72,9 @@
 
 @media screen and (max-width: $MOBILE_MAX) {
   .cards {
-    width: calc(100% - 100px);
-    height: calc(100% - 150px);
-    margin-left: 50px;
-    margin-top: 75px;
+    width: calc(100% - 200px);
+    height: calc(100% - 100px);
+    margin-left: 100px;
+    margin-top: 50px;
   }
 }

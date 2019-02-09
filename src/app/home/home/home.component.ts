@@ -62,9 +62,11 @@ export class HomeComponent implements OnInit {
   ngOnInit() {}
 
   track() {
-    ; (window as any).gtag('event', 'linkedin', {
-      event_category: 'link',
-      event_label: 'clicked'
-    })
+    if ((window as any).gtag) {
+      ; (window as any).gtag('event', 'linkedin', {
+        event_category: 'link',
+        event_label: 'clicked'
+      })
+    }
   }
 }

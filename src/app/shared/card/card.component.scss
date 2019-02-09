@@ -21,7 +21,7 @@
   top: 0;
   left: 0;
   backface-visibility: hidden;
-  border: 10px solid white;
+  border: toREM(10) solid white;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
   background-color: white;
   border-radius: 10%;

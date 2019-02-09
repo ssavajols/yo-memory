@@ -21,6 +21,8 @@ describe('EndGameComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(EndGameComponent)
     component = fixture.componentInstance
+    component._game.startGameTime = new Date(100)
+    component._game.endGameTime = new Date(2001)
     fixture.detectChanges()
   })
 

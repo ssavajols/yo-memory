@@ -3,7 +3,7 @@ import { Component, OnInit, Output, EventEmitter, Input } from '@angular/core'
 @Component({
   selector: 'yom-button',
   template: `
-    <button (touchend)="action.emit(value)" (mouseup)="action.emit(value)">
+    <button (click)="action.emit(value)">
       <ng-content></ng-content>
     </button>
   `,

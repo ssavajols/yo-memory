@@ -1,25 +1,24 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { async, ComponentFixture, TestBed } from '@angular/core/testing'
 
-import { ChangePlayerComponent } from './change-player.component';
+import { ChangePlayerComponent } from './change-player.component'
 
 describe('ChangePlayerComponent', () => {
-  let component: ChangePlayerComponent;
-  let fixture: ComponentFixture<ChangePlayerComponent>;
+  let component: ChangePlayerComponent
+  let fixture: ComponentFixture<ChangePlayerComponent>
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ChangePlayerComponent ]
-    })
-    .compileComponents();
-  }));
+      declarations: [ChangePlayerComponent]
+    }).compileComponents()
+  }))
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(ChangePlayerComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
-  });
+    fixture = TestBed.createComponent(ChangePlayerComponent)
+    component = fixture.componentInstance
+    fixture.detectChanges()
+  })
 
   it('should create', () => {
-    expect(component).toBeTruthy();
-  });
-});
+    expect(component).toBeTruthy()
+  })
+})
